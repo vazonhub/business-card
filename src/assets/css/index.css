@@ -1,0 +1,115 @@
+body {
+    font-family: 'Gilroy', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 400;
+}
+
+.start {
+    width: 100%;
+    padding: 120px 0 40px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    background-color: #0D72FE;
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    justify-content: center;
+}
+
+.project-header {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+}
+.project-header h1 {
+    text-align: center;
+    font-family: 'Gilroy';
+    font-weight: 700;
+    color: #FFFFFF;
+    font-size: 40px;
+}
+
+.project-content {
+    padding: 0 130px 60px 130px;
+}
+
+.project-content p {
+    font-family: 'Gilroy';
+    font-weight: 400;
+    font-size: 16px;
+    color: #FFFFFF;
+    text-align: justify;
+    text-justify: inter-word;
+    letter-spacing: 3%;
+}
+
+.project-content {
+    padding: 0 130px 60px 130px;
+}
+
+.content-wrapper {
+    transition: all 0.4s ease-in-out;
+}
+
+.content-visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.content-hidden {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    pointer-events: none;
+}
+
+.content-inner {
+    width: 100%;
+}
+
+.project-content p {
+    font-family: 'Gilroy';
+    font-weight: 400;
+    font-size: 16px;
+    color: #FFFFFF;
+    text-align: justify;
+    text-justify: inter-word;
+    letter-spacing: 0.03em;
+    line-height: 1.6;
+}
+
+.content-inner h2,
+.content-inner p {
+    animation: fadeInUp 0.5s ease-out 0.3s both;
+}
+.content-inner img,
+.content-inner video {
+    animation: scaleIn 0.6s ease-out 0.4s both;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

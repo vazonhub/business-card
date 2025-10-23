@@ -1,21 +1,25 @@
-import { createRoot } from 'react-dom/client'
-import './index.css';
-import { NavMenu } from './components/nav';
-import { Icon } from './components/icons';
+import { createRoot } from 'react-dom/client';
+import './assets/css/fonts.css';
+import './assets/css/index.css';
+import './assets/css/reset.css';
+import { Projects } from './components/projects';
+import { Header } from './components/header';
+import { ProjectsTabsProvider } from './utils/useProjectsTabs';
+import { LanguageProvider } from './utils/useLanguage';
 
 createRoot(document.getElementById('root')!).render(
-  <>
-    <section className='start'>
-      <header className='header'>
-        <Icon />
-        <NavMenu />
-      </header>
-    </section>
-    <main>
+  <ProjectsTabsProvider>
+    <LanguageProvider>
+      <section className='start'>
+        <Header />
+        <Projects />
+      </section>
+      <section id='about'>
 
-    </main>
-    <footer>
+      </section>
+      <footer id='support'>
 
-    </footer>
-  </>
+      </footer>
+    </LanguageProvider>
+  </ProjectsTabsProvider>
 )
