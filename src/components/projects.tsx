@@ -1,9 +1,11 @@
 import { ProjectsSwitch } from "./switches/ProjectsSwitch"
 import { TABS, useProjectsTabs } from "../utils/useProjectsTabs";
 import { useEffect, useRef } from "react";
+import { useLanguage } from "../utils/useLanguage";
 
 export const Projects = () => {
     const { activeTab, setActiveTab, setSmall } = useProjectsTabs();
+    const { t } = useLanguage();
     const switchRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
@@ -28,13 +30,14 @@ export const Projects = () => {
     return (
         <section className='project'>
             <section className='project-header'>
-                <h1>Тут лучший независимый агрегатор</h1>
+                <h1>{t('headline')}</h1>
                 <ProjectsSwitch ref={switchRef} selected={activeTab} onChange={setActiveTab} />
             </section>
-            <section className='project-content'>
+            <section id="projects" className='project-content'>
                 <div className={`content-wrapper ${activeTab === TABS.RHIZOME ? 'content-visible' : 'content-hidden'}`}>
                     {activeTab === TABS.RHIZOME && (
                         <div className="content-inner">
+                            <h2 className="content-inner-headline">Rhizome</h2>
                             <p>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum. Cras vehicula felis justo, ac tincidunt sapien fermentum at. Proin nec est et sem lobortis facilisis.Vivamus lacinia odio vitae vestibulum vestibulum. Cras vehicula felis justo, ac tincidunt sapien fermentum at. Proin nec est et sem lobortis facilisis.Vivamus lacinia odio vitae vestibulum vestibulum. Cras vehicula felis justo, ac tincidunt sapien fermentum at. Proin nec est et sem lobortis facilisis.Vivamus lacinia odio vitae vestibulum vestibulum. Cras vehicula felis justo, ac tincidunt sapien fermentum at. Proin nec est et sem lobortis facilisis.<br /><br />
                                 Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.<br /><br />
@@ -48,10 +51,10 @@ export const Projects = () => {
                         </div>
                     )}
                 </div>
-
                 <div className={`content-wrapper ${activeTab === TABS.NEWS ? 'content-visible' : 'content-hidden'}`}>
                     {activeTab === TABS.NEWS && (
                         <div className="content-inner">
+                            <h2 className="content-inner-headline">News</h2>
                             <p>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum. Cras vehicula felis justo, ac tincidunt sapien fermentum at. Proin nec est et sem lobortis facilisis.Vivamus lacinia odio vitae vestibulum vestibulum. Cras vehicula felis justo, ac tincidunt sapien fermentum at. Proin nec est et sem lobortis facilisis.Vivamus lacinia odio vitae vestibulum vestibulum. Cras vehicula felis justo, ac tincidunt sapien fermentum at. Proin nec est et sem lobortis facilisis.Vivamus lacinia odio vitae vestibulum vestibulum. Cras vehicula felis justo, ac tincidunt sapien fermentum at. Proin nec est et sem lobortis facilisis.<br /><br />
                                 Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.<br /><br />

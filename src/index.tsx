@@ -2,24 +2,18 @@ import { createRoot } from 'react-dom/client';
 import './assets/css/fonts.css';
 import './assets/css/index.css';
 import './assets/css/reset.css';
-import { Projects } from './components/projects';
-import { Header } from './components/header';
 import { ProjectsTabsProvider } from './utils/useProjectsTabs';
 import { LanguageProvider } from './utils/useLanguage';
+import { About } from './components/about';
+import { Main } from './components/main';
+import { Footer } from './components/footer';
 
 createRoot(document.getElementById('root')!).render(
   <ProjectsTabsProvider>
     <LanguageProvider>
-      <section className='start'>
-        <Header />
-        <Projects />
-      </section>
-      <section id='about'>
-
-      </section>
-      <footer id='support'>
-
-      </footer>
+      <Main />
+      <About />
+      <Footer />
     </LanguageProvider>
   </ProjectsTabsProvider>
 )

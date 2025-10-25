@@ -18,8 +18,19 @@ export const ProjectsTabsProvider: React.FC<{ children: React.ReactNode }> = ({ 
   const [activeTab, setActiveTab] = useState<TABS>(TABS.RHIZOME);
   const [small, setSmall] = useState<boolean>(false);
 
+  const handleSetActiveTab = (tab: TABS) => {
+    setActiveTab(tab);
+    const element = document.getElementById('projects');
+    if (element) {
+      element.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  }
+
   return (
-    <ProjectsTabsContext.Provider value={{ activeTab, setActiveTab, small, setSmall }}>
+    <ProjectsTabsContext.Provider value={{ activeTab, setActiveTab: handleSetActiveTab, small, setSmall }}>
       {children}
     </ProjectsTabsContext.Provider>
   );

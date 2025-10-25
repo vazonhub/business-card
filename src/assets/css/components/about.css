@@ -1,0 +1,46 @@
+.about {
+    color: #0D131D;
+    padding: 80px 210px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #EFF1F4;
+}
+
+.about-header {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.about-headline {
+    font-family: 'Gilroy';
+    font-weight: 600;
+    font-size: 32px;
+}
+
+@media (max-width: 1000px) {
+    .about {
+        padding: 80px 130px;
+    }
+}
+
+@media (max-width: 800px) {
+    .about {
+        padding: 35px;
+    }
+
+    .about-header {
+        gap: 10px;
+    }
+}
+
+@media (max-width: 400px) {
+    .about {
+        padding: 15px;
+    }
+
+    .about-headline {
+        font-size: 22px;
+    }
+}

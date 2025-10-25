@@ -1,0 +1,49 @@
+.about-switch {
+    background-color: #DDE0E4;
+    border-radius: 10px;
+    padding: 3px;
+    display: flex;
+    flex-direction: row;
+    gap: 3px;
+    align-items: center;
+}
+
+.about-switch-button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 25px;
+    border: none;
+    border-radius: 8px;
+    transition: .3s ease-in-out;
+    font-family: 'Gilroy';
+    font-weight: 500;
+    font-size: 14px;
+    color: #0D131D;
+}
+
+.about-switch-button:hover {
+    cursor: pointer;
+}
+
+.about-switch-button_active {
+    background-color: #FFFFFF;
+}
+.about-switch-button_active:hover {
+    background-color: #fbfbfb;
+}
+
+.about-switch-button_disable {
+    background-color: transparent;
+}
+.about-switch-button_disable:hover {
+    background-color: #ebeded;
+}
+
+@media (max-width: 400px) {
+    .about-switch-button {
+        padding: 6px 25px;
+        font-size: 12px;
+    }
+}

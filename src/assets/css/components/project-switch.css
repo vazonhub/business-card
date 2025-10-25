@@ -57,3 +57,16 @@
     background-color: transparent;
     color: #C0D6F9;
 }
+
+@media (max-width: 400px) {
+    .projects-switch-button svg {
+        display: none;
+    }
+
+    .projects-switch-button {
+        width: 144px;
+        height: auto;
+        font-size: 12px;
+        padding: 3px 0;
+    }
+}

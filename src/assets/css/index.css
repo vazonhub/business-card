@@ -1,6 +1,36 @@
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
 body {
-    font-family: 'Gilroy', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: 'Gilroy';
     font-weight: 400;
+}
+
+#projects, #about, #support {
+  scroll-margin-top: 50px;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 .start {
@@ -72,6 +102,15 @@ body {
     width: 100%;
 }
 
+.content-inner-headline {
+    font-family: 'Gilroy';
+    font-weight: 600;
+    font-size: 28px;
+    color: #FFFFFF;
+    letter-spacing: 0.03em;
+    padding: 10px;
+}
+
 .project-content p {
     font-family: 'Gilroy';
     font-weight: 400;
@@ -83,33 +122,45 @@ body {
     line-height: 1.6;
 }
 
-.content-inner h2,
-.content-inner p {
-    animation: fadeInUp 0.5s ease-out 0.3s both;
-}
-.content-inner img,
-.content-inner video {
-    animation: scaleIn 0.6s ease-out 0.4s both;
+@media (max-width: 800px) {
+    .project {
+        gap: 20px;
+    }
+
+    .project-header h1 {
+        font-size: 32px;
+    }
+
+    .project-content {
+        padding: 0 35px 0 35px;
+    }
+    .start {
+        padding: 120px 0 25px 0;
+    }
+
+    .project-content p {
+        font-size: 14px;
+    }
 }
 
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
+@media (max-width: 400px) {
+    .start {
+        padding-top: 80px;
     }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
 
-@keyframes scaleIn {
-    from {
-        opacity: 0;
-        transform: scale(0.9);
+    .project-header h1 {
+        font-size: 18px;
     }
-    to {
-        opacity: 1;
-        transform: scale(1);
+
+    .project {
+        gap: 20px;
+    }
+
+    .project-content {
+        padding: 0 15px 15px 15px;
+    }
+    
+    .project-content p {
+        font-size: 10px;
     }
 }
