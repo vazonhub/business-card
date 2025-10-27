@@ -30,6 +30,8 @@ export const LinkUsForm = () => {
             <button className='apply-button' type='submit'>
                 {t('support.form.submit')}
             </button>
+            <input type="hidden" name="_next" value="vazon.by" />
+            <input type="hidden" name="_captcha" value="false" />
             <input type="hidden" name="_subject" value="FAQ" />
         </form>
     )
