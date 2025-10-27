@@ -21,6 +21,7 @@
 }
 .form-field input,
 .form-field textarea {
+    font-family: 'Gilroy';
     border-style: solid;
     border-radius: 8px;
     border-width: 1px;
@@ -61,7 +62,7 @@
     color: #0D131D;
 }
 
-.apply-button button:hover {
+.apply-button:hover {
     background-color: transparent;
     cursor: pointer;
 }

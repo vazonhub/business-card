@@ -1,8 +1,9 @@
+import { JSX } from 'react';
 import './../assets/css/components/about-block.css';
 
 interface AboutBlockProps {
     title: string;
-    content: string;
+    content: JSX.Element[];
     index: number;
 }
 

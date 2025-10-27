@@ -9,6 +9,20 @@ export enum ABOUT {
     HOW = 'how'
 }
 
+const renderContentWithBreaks = (content: string) => {
+    console.log('Rendering content:', content);
+    return content.split('\n\n').map((paragraph, pIndex) => (
+        <p key={pIndex}>
+            {paragraph.split('\n').map((line, lIndex) => (
+                <span key={lIndex}>
+                    {line}
+                    {lIndex < paragraph.split('\n').length - 1 && <><br /><br /></>}
+                </span>
+            ))}
+        </p>
+    ));
+};
+
 export const About = () => {
     const { t } = useLanguage();
     const [selected, setSelected] = useState(ABOUT.WHAT);
@@ -38,24 +52,20 @@ export const About = () => {
 
     const ABOUT_HOW = useMemo(() => [
         {
-            title: t('about.what.independence.title'),
-            content: t('about.what.independence.content')
+            title: t('about.how.transfer.title'),
+            content: t('about.how.transfer.content')
         },
         {
-            title: t('about.what.freedom.title'),
-            content: t('about.what.freedom.content')
+            title: t('about.how.content_generation.title'),
+            content: t('about.how.content_generation.content')
         },
         {
-            title: t('about.what.safety.title'),
-            content: t('about.what.safety.content')
+            title: t('about.how.protection.title'),
+            content: t('about.how.protection.content')
         },
         {
-            title: t('about.what.trust.title'),
-            content: t('about.what.trust.content')
-        },
-        {
-            title: t('about.what.comfort.title'),
-            content: t('about.what.comfort.content')
+            title: t('about.how.data_protection.title'),
+            content: t('about.how.data_protection.content')
         },
     ], [t]);
 
@@ -72,7 +82,7 @@ export const About = () => {
                             key={index}
                             index={index}
                             title={about.title}
-                            content={about.content}
+                            content={renderContentWithBreaks(about.content)} 
                         />)}
                     </>
                 }
@@ -82,7 +92,7 @@ export const About = () => {
                             key={index}
                             index={index}
                             title={about.title}
-                            content={about.content}
+                            content={renderContentWithBreaks(about.content)} 
                         />)}
                     </>
                 }

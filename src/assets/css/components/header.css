@@ -45,6 +45,7 @@
 }
 
 .header > .projects-switch {
+    z-index: 1002;
     position: absolute;
     left: 50%;
     animation: fadeUpDescProjects 0.2s ease-in-out 0.1s both;
