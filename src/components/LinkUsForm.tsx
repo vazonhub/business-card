@@ -6,7 +6,7 @@ import './../assets/css/components/link-us.css';
 export const LinkUsForm = () => {
   const { t } = useLanguage();
   const formRef = useRef<HTMLFormElement>(null);
-  const [status, setStatus] = useState<'success' | 'error' | 'loading' | null>('success');
+  const [status, setStatus] = useState<'success' | 'error' | 'loading' | null>(null);
   const [visible, setVisible] = useState(false);
 
   const handleSubmit = async (e: FormEvent) => {
