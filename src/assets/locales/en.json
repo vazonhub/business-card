@@ -66,7 +66,10 @@
                 "title": "Message",
                 "placeholder": "Write a message..."
             },
-            "submit": "Send mail"
+            "submit": "Send mail",
+            "sending": "Sending...",
+            "success": "Your message has been sent successfully!",
+            "error": "An error occurred while sending your message. Please try again later."
         }
     }
 }

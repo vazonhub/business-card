@@ -8,6 +8,7 @@
     background-color: #EFF1F4;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 
 .form-field {
@@ -65,6 +66,22 @@
 .apply-button:hover {
     background-color: transparent;
     cursor: pointer;
+}
+
+.success-message {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgb(0, 128, 0, 0.3);
+    color: rgb(13, 19, 29);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    border-radius: 10px;
+    font-weight: bold;
 }
 
 @media (max-width: 1000px) {
@@ -125,4 +142,84 @@
     .form-field textarea {
         padding: 6px 8px;
     }
+}
+
+.status-overlay {
+  position: absolute;
+  inset: 0;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Gilroy';
+  font-size: 22px;
+  font-weight: 600;
+  color: rgb(13, 19, 29, 0.6);
+  backdrop-filter: blur(6px);
+  z-index: 10;
+  pointer-events: none;
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 0.6s ease, transform 0.6s ease, background-color 0.6s ease;
+}
+
+.status-overlay.show {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.status-overlay.hide {
+  opacity: 0;
+  transform: scale(0.97);
+}
+
+.status-overlay.success {
+  background: linear-gradient(
+    135deg,
+    rgba(129, 199, 132, 0.35),
+    rgba(76, 175, 80, 0.25)
+  );
+  box-shadow: 0 0 20px rgba(76, 175, 80, 0.2);
+}
+
+.status-overlay.error {
+  background: linear-gradient(
+    135deg,
+    rgba(239, 83, 80, 0.35),
+    rgba(229, 57, 53, 0.25)
+  );
+  box-shadow: 0 0 20px rgba(229, 57, 53, 0.2);
+}
+
+.status-overlay.error.show {
+  animation: gentleShake 0.4s ease;
+}
+
+@keyframes gentleShake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-4px); }
+  50% { transform: translateX(4px); }
+  75% { transform: translateX(-2px); }
+}
+
+.status-overlay.loading {
+  background-color: rgba(13, 19, 29, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: all;
+}
+
+.circular-progress {
+  width: 50px;
+  height: 50px;
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-top: 4px solid rgb(13, 19, 29, 0.6);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
