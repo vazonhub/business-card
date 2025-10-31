@@ -19,7 +19,7 @@ export const AboutBlock = ({
                 animationDelay: `${index * 0.1}s`
             }}    
         >
-            <h3 className='about-block-title'>{title}</h3>
+            <h2 className='about-block-title'>{title}</h2>
             <p className='about-block-content'>{content}</p>
         </section>
     )
