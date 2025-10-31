@@ -72,6 +72,7 @@ export const LinkUsForm = () => {
           required
           type="email"
           placeholder={t('support.form.email.placeholder')}
+          autoComplete="email"
         />
       </label>
       <label className="form-field message">
