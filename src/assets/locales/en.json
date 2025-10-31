@@ -9,10 +9,6 @@
                 "title": "Our goal is independent data transmission.",
                 "content": "We are creating a series of products interconnected with only one goal - independent data transmission on the network. This is a place where no one knows who created the information, but everyone can view and see it. Our idea is to create a place where people can share their thoughts, opinions and worldviews without fear that their identity will be revealed."
             },
-            "freedom": {
-                "title": "Our goal is freedom.",
-                "content": "We believe that everyone has the right to express their thoughts freely without fear of censorship or control. Our technology provides a digital space where ideas can live and develop regardless of their popularity or compliance with different views. Your voice will be heard here, and your right to self-expression will be protected."
-            },
             "safety": {
                 "title": "Our goal is your safety.",
                 "content": "We do everything to protect your interests and safety. Our data transfer protocol uses advanced encryption and information protection technologies so that it is impossible to find out who expressed their opinion."
@@ -30,19 +26,19 @@
             "button": "How do we do it?",
             "transfer": {
                 "title": "Data transfer method",
-                "content": "Data transmission in the Rhizome network is implemented through a decentralized P2P architecture, where each participant acts as both a client and a server, eliminating a single point of failure. An optimized protocol based on Kademlia DHT is used to quickly detect other participants and the location of the desired content. \nContent such as news items is divided into small, cryptographically signed chunks, which allows you to download parts of the same news simultaneously from different peers. This not only ensures the survivability of data, but also significantly increases the speed of delivery: requests to the nearest and fastest nodes (including \"super peers\" for initial caching and bootstrap nodes) are processed with priority, providing performance comparable to traditional web services."
+                "content": "Data transmission in the Rhizome network is implemented through a decentralized P2P architecture, where each participant acts as both a client and a server, eliminating a single point of failure. An optimized protocol based on Kademlia DHT is used to quickly detect other participants and the location of the desired content."
             },
             "content_generation": {
                 "title": "Content generation",
-                "content": "Content generation in Rhizome uses a hybrid approach combining the power of centralized computing resources for information processing with the decentralized resilience of the P2P network. The whole process begins in the Rhizome cloud service, where a powerful neural network (NS) is deployed, designed to collect, analyze and synthesize data from a variety of traditional news sources. The National Assembly forms an independent, objective assessment of the situation by creating the first version of the news. \nImmediately after that, the generated content (news) is injected into the Rhizome network through dedicated, trusted nodes. After entering the P2P network, the news is split into chunks, signed with a cryptographic key, and begins to spread across a decentralized network. Thus, the cloud service serves as a highly efficient and reliable \"injector\" of high-quality, independent content, and the Rhizome network itself guarantees its instant, stable and censorship-proof distribution."
+                "content": "Content generation in Rhizome uses a hybrid approach combining the power of centralized computing resources for information processing with the decentralized resilience of the P2P network. The whole process begins in the Rhizome cloud service, where a powerful neural network (NS) is deployed, designed to collect, analyze and synthesize data from a variety of traditional news sources. The National Assembly forms an independent, objective assessment of the situation by creating the first version of the news."
             },
             "protection": {
                 "title": "Protection within the network",
-                "content": "Protecting the integrity and authenticity of data within the Rhizome network is based on digital signatures and strict versioning. Each participant is authenticated with a unique Peer ID created based on a pair of cryptographic keys. All published data, from news fragments to P2P protocol packets, is signed with the sender's private key. This allows any recipient to instantly verify that the data has not been changed and is indeed coming from the claimed source. \nIn addition, the mechanism of collective news updates, where new versions must be agreed upon or accepted by other peers, serves as additional decentralized protection against spam, low-quality information and deliberate distortion of content."
+                "content": "Protecting the integrity and authenticity of data within the Rhizome network is based on digital signatures and strict versioning. Each participant is authenticated with a unique Peer ID created based on a pair of cryptographic keys. All published data, from news fragments to P2P protocol packets, is signed with the sender's private key. This allows any recipient to instantly verify that the data has not been changed and is indeed coming from the claimed source."
             },
             "data_protection": {
                 "title": "Data protection",
-                "content": "The protection of privacy and personal data in Rhizome is provided by mandatory End-to-End encryption (End-to-End Encryption). All data and communications are encrypted on the sender's device and can only be decrypted by the final recipient, making the content inaccessible to intermediate nodes involved in routing. \nTo ensure maximum freedom of speech and protection of information sources, the protocol includes anonymization mechanisms similar to the principles of Onion Routing or Mixnets. This allows you to hide the Peer ID and the real location of the participant who originally generated or made a critical update to the news, thereby protecting it from tracking and preventing censorship at the source level."
+                "content": "The protection of privacy and personal data in Rhizome is provided by mandatory End-to-End encryption (End-to-End Encryption). All data and communications are encrypted on the sender's device and can only be decrypted by the final recipient, making the content inaccessible to intermediate nodes involved in routing."
             }
         }
     },

@@ -33,10 +33,6 @@ export const About = () => {
             content: t('about.what.independence.content')
         },
         {
-            title: t('about.what.freedom.title'),
-            content: t('about.what.freedom.content')
-        },
-        {
             title: t('about.what.safety.title'),
             content: t('about.what.safety.content')
         },
