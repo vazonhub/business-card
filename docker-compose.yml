@@ -8,4 +8,8 @@ services:
     ports:
       - "80:80"
       - "443:443"
+    environment:
+      VITE_EMAILJS_SERVICE_ID: ${EMAILJS_SERVICE_ID}
+      VITE_EMAILJS_TEMPLATE_ID: ${EMAILJS_TEMPLATE_ID}
+      VITE_EMAILJS_PUBLIC_KEY: ${EMAILJS_PUBLIC_KEY}
     restart: unless-stopped
