@@ -2,8 +2,9 @@ version: '3.8'
 
 services:
   frontend:
+    image: vazon-business-card:latest
     build: .
     container_name: vazon-business-card
     ports:
       - "80:80"
-    restart: always
+    restart: unless-stopped
