@@ -18,7 +18,7 @@ export const Footer = () => {
                     <img src={mainLogo} alt="VAZON logo" />
                     <section className='footer-info_attr'>
                         <h4>Vazon</h4>
-                        <span>© 2025</span>
+                        <span>© 2025-2026</span>
                     </section>
                 </section>
                 <section>
